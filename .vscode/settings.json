@@ -1,7 +1,0 @@
-{
-    "workbench.tree.enableStickyScroll": false,
-    "editor.stickyScroll.scrollWithEditor": false,
-    "editor.stickyScroll.defaultModel": "indentationModel",
-    "editor.stickyScroll.enabled": false,
-    "git.ignoreLimitWarning": true
-}

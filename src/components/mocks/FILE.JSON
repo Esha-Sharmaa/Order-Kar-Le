@@ -1,0 +1,16 @@
+{
+  "id": "750132",
+  "imageId": "v1674029850/PC_Creative%20refresh/3D_bau/banners_new/Dosa.png",
+  "action": {
+    "link": "https://www.swiggy.com/collections/80426?collection_id=80426&tags=layout_CCS_Dosa&type=rcv2",
+    "text": "Dosa",
+    "type": "WEBLINK"
+  },
+  "entityType": "BANNER",
+  "accessibility": {
+    "altText": "restaurants curated for dosa",
+    "altTextCta": "open"
+  },
+  "entityId": "swiggy://collectionV2?collection_id=80426&tags=layout_CCS_Dosa",
+  "frequencyCapping": {}
+}

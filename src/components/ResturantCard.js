@@ -1,8 +1,9 @@
-import {CDN_URL} from "../utils/constants";
-const ResturantCard = (props) => {
-    const { name, cloudinaryImageId, locality, cuisines, avgRatingString, sla } = props?.resData;
+import { CDN_URL } from "../utils/constants";
+import React from "react";
+const ResturantCard = ({resData}) => {
+    const { name, cloudinaryImageId, locality, cuisines, avgRatingString, sla } = resData;
     return (
-        <div className="flex-column w-52">
+        <div data-testid = "resCard" className="flex-column w-52">
             <img className="w-52 h-36 object-cover rounded-xl" src={CDN_URL + cloudinaryImageId} alt="Restaurant Image" />
             <div className="restaurant-details">
                 <h4 className="text-lg font-semibold">{name}</h4>

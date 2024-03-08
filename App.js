@@ -11,6 +11,7 @@ import UserContext from "./src/utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./src/utils/appStore";
 import Help from "./src/components/Help";
+import FoodCollection from "./src/components/FoodCollection";
 
 const AppLayout = () => {
     const [userName, setUserName] = useState();
@@ -51,6 +52,10 @@ const appRoute = createBrowserRouter([
             {
                 path: "/Help",
                 element: <Help />
+            },
+            {
+                path: "/foodCollection/:link",
+                element: <FoodCollection/>
             },
             {
                 path: "/grocery",

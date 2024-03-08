@@ -4,6 +4,7 @@ import delivery from "../../images/png/Delivery_fee_new_cjxumu.avif";
 import ResturantCategory from "./ResturantCategory";
 import { MENU_API } from "../utils/constants";
 import Shimmer from "./Shimmer";
+import React from "react";
 const ResturantDetails = () => {
     const { resID } = useParams();
     const [resInfo, setResinfo] = useState(null);

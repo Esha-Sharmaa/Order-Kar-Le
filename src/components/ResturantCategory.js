@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import CategoryItemsList from "./CategoryItemsList";
 const ResturantCategory = ({ data, showDetails, setShowIndex }) => {
     const { title, itemCards } = data;

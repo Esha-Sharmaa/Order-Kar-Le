@@ -127,9 +127,6 @@ export default {
     // rootDir: undefined,
 
     // A list of paths to directories that Jest should use to search for files in
-    // roots: [
-    //   "<rootDir>"
-    // ],
 
     // Allows you to use a custom runner instead of Jest's default test runner
     // runner: "jest-runner",
@@ -177,7 +174,8 @@ export default {
 
     // A map from regular expressions to paths to transformers
   transform: {
-    "^.+\\.jsx?$": "babel-jest"
+    "^.+\\.jsx?$": "babel-jest",
+    "^.+\\.(jpg|jpeg|png|gif|svg)$": "jest-transform-stub"
   },
     testPathIgnorePatterns: ['/node_modules/'],
 

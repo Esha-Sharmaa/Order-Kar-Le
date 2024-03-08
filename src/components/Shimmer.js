@@ -1,3 +1,4 @@
+import React from "react";
 const Shimmer = () => {
     return (
         <div className="w-10/12 mx-auto overflow-hidden mt-10">

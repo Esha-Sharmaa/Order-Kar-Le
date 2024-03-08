@@ -1,4 +1,5 @@
 import { CDN_URL } from "../utils/constants";
+import React from "react";
 const ResturantChain = (props) => {
     const { name, cloudinaryImageId, locality, cuisines, avgRatingString, sla } = props?.resData;
     return (

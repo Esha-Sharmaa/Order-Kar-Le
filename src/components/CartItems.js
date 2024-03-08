@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { RES_CDN_URL } from "../utils/constants";
+import React from "react";
 const CartItems = ({ resData }) => {
     const { name, imageId, price, defaultPrice } = resData;
 
     return (
-        <div className="flex justify-between p-2 my-2"> 
+        <div className="flex justify-between p-2 my-2 " data-testid = "cart-items"> 
             <img
                 className="w-[40px] h-[30px] rounded-xl object-cover"
                 src={RES_CDN_URL + imageId}

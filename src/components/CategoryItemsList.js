@@ -1,4 +1,4 @@
-
+import React from "react";
 import { useDispatch } from "react-redux";
 import { RES_CDN_URL } from "../utils/constants";
 import { addItem } from "../utils/cartSlice";

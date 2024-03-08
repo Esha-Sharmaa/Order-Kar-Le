@@ -4,6 +4,8 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { useContext, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import React from "react";
+
 const Header = () => {
     const [status, setStatus] = useState(false);
     const cartItems = useSelector((store) => store.cart.items);
