@@ -60,18 +60,37 @@ const ResturantList = () => {
     );
     setFilteredResturant(filtered);
   };
-
+  const slideLeft = (id) => {
+    let slider = document.getElementById(id);
+    slider.scrollLeft -= 500;
+    console.log(slider.scrollLeft);
+  }
+  const slideRight = (id) => {
+    let slider = document.getElementById(id);
+    slider.scrollLeft += 500;
+    console.log(slider.scrollLeft);
+  }
   const renderCards = () => (
     <div className="w-10/12 mx-auto px-6">
       <div className=" border-gray-200 border-b-2">
         <div className="flex justify-between mt-8">
           <h2 className="text-2xl font-bold"> What's on your mind? </h2>
           <div>
-            <button className="text-4xl"> &#8592;</button>
-            <button className="text-4xl ml-8"> &#8594;</button>
+            <button onClick={() => slideLeft("slider")} className="text-4xl">
+              &#8592;
+            </button>
+            <button
+              onClick={() => slideRight("slider")}
+              className="text-4xl ml-8"
+            >
+              &#8594;
+            </button>
           </div>
         </div>
-        <div className="flex gap-8 mb-6 overflow-hidden">
+        <div
+          id="slider"
+          className="flex gap-8 mb-6 overflow-x-scroll whitespace-nowrap no-scrollbar scroll-smooth"
+        >
           {dishesList.map((dish) => {
             const encodedLink = encodeURIComponent(dish.entityId);
             return (
@@ -88,11 +107,21 @@ const ResturantList = () => {
             Top Restaurants Chain in Gwalior
           </h2>
           <div>
-            <button className="text-4xl"> &#8592;</button>
-            <button className="text-4xl ml-8"> &#8594;</button>
+            <button className="text-4xl" onClick={() => slideLeft("slider2")}>
+              &#8592;
+            </button>
+            <button
+              className="text-4xl ml-8"
+              onClick={() => slideRight("slider2")}
+            >
+              &#8594;
+            </button>
           </div>
         </div>
-        <div className="flex gap-14 overflow-hidden">
+        <div
+          id="slider2"
+          className="flex gap-14 mb-8 overflow-x-scroll whitespace-nowrap no-scrollbar scroll-smooth"
+        >
           {topResturantList.map((resturant) => (
             <Link
               key={resturant.info.id}

@@ -4,7 +4,6 @@ import { extract } from "../utils/functions";
 import { Link } from "react-router-dom";
 import { COLLECTION_URL } from "../utils/constants";
 import Shimmer from "./Shimmer";
-import ResturantCard from "./ResturantCard";
 import ResturantChain from "./ResturantChain";
 const FoodCollection = () => {
     const { link } = useParams();

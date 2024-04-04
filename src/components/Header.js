@@ -1,14 +1,15 @@
 import logo from "../../images/png/color.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { useContext, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import React from "react";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
     const [status, setStatus] = useState(false);
     const cartItems = useSelector((store) => store.cart.items);
+    const { loggedInUser} = useContext(UserContext);
     
     return (
         <header className="flex justify-between h-18 shadow-md px-12 py-2">
@@ -22,6 +23,7 @@ const Header = () => {
                 <button className="text-xl  font-medium" href="#" id="signup" onClick={() => setStatus(!status)}> {status ? "Sign out" : "Sign in"}</button>
                 <button className="text-xl  font-medium" href="#" id="signup" > Offers </button>
                 <Link className="text-xl  font-medium" to="/Help"> Help </Link>
+                <Link className="text-xl  font-medium" to="/Help"> {loggedInUser} </Link>
                 <Link className="text-2xl text-custom-default" to="/cart"> <FontAwesomeIcon icon={faShoppingCart} className="cart" />({cartItems.length})</Link>
             </nav>
         </header>

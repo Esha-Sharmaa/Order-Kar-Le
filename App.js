@@ -12,6 +12,7 @@ import { Provider } from "react-redux";
 import appStore from "./src/utils/appStore";
 import Help from "./src/components/Help";
 import FoodCollection from "./src/components/FoodCollection";
+import About from "./src/components/About";
 
 const AppLayout = () => {
     const [userName, setUserName] = useState();
@@ -52,6 +53,10 @@ const appRoute = createBrowserRouter([
             {
                 path: "/Help",
                 element: <Help />
+            },
+            {
+                path: "/About",
+                element: <About />
             },
             {
                 path: "/foodCollection/:link",

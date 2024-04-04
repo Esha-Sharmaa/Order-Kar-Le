@@ -9,7 +9,7 @@ const ResturantChain = (props) => {
                 <h4 className="text-lg font-semibold">{name}</h4>
                 <span className="text-lg font-semibold">★ {avgRatingString}</span>
                 <span className="text-lg font-semibold">  {sla.slaString}</span>
-                <p className="text-sm font-light tracking-wide"> {cuisines.join(", ")}</p>
+                <p className="text-sm font-light tracking-wide text-wrap"> {cuisines.join(", ")}</p>
                 <p className="text-sm font-light tracking-wide"> {locality}</p>
             </div>
         </div>

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { CDN_URL_CAROUSEL } from "../utils/constants";
 import React from "react";
 const CarouselItem = ({ dish }) => {
@@ -9,3 +8,5 @@ const CarouselItem = ({ dish }) => {
         </>
 }
 export default CarouselItem;
+
+

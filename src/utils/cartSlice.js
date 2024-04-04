@@ -11,7 +11,7 @@ const cartSlice = createSlice({
             // VANILLA REDUX WE CANT NO MUTATE THE STATE 
             // CREATE A NEW STATE VARIABLE MUTATE IT AND THEN RETURN IT 
             // redux toolkit we have to MUTATE THE STATE 
-            state.items.push(action.payload)
+            state.items.push(action.payload);
         },
         removeItem: (state, action) => {  //,action
             state.items.pop();

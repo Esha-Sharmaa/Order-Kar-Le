@@ -17,8 +17,10 @@ const ResturantDetails = () => {
         try {
             const data = await fetch(MENU_API + resID);
             const json = await data.json();
+            console.log("json", json?.data);
             setResinfo(json?.data);
             setLoading(false);
+            console.log(resInfo);
         } catch (e) {
             console.log("error is " + e);
             setLoading(false);
@@ -26,8 +28,8 @@ const ResturantDetails = () => {
     };
 
     if (loading) return <Shimmer />
-    const { id, name, cloudinaryImageId, areaName, costForTwoMessage, cuisines, feeDetails, avgRating, totalRatings, String, sla } = resInfo?.cards[0]?.card?.card?.info;
-    const recommendedCards = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards || [];
+    const { name, cloudinaryImageId, areaName, costForTwoMessage, cuisines, feeDetails, avgRating, totalRatings, String, sla } = resInfo?.cards[2]?.card?.card?.info;
+    const recommendedCards = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards || [];
     const categories = recommendedCards.filter(c => c?.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");  ;
     return (
         <div className="w-6/12 mx-auto mt-6">
