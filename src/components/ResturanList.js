@@ -62,12 +62,10 @@ const ResturantList = () => {
   const slideLeft = (id) => {
     let slider = document.getElementById(id);
     slider.scrollLeft -= 500;
-    console.log(slider.scrollLeft);
   };
   const slideRight = (id) => {
     let slider = document.getElementById(id);
     slider.scrollLeft += 500;
-    console.log(slider.scrollLeft);
   };
   const renderCards = () => (
     <div className="w-10/12 mx-auto px-6">

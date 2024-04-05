@@ -3,7 +3,6 @@ import React from "react";
 class UserClass extends React.Component{
     constructor(props) {
         super(props);
-        console.log(this);
         this.state = {
             count: 0,
             count2:0,
@@ -30,7 +29,6 @@ class UserClass extends React.Component{
     async componentDidMount() {
         const data = await fetch("https://api.github.com/users/Esha-Sharmaa");
         const json = await data.json();
-        console.log(json);
     }
 }
 export default UserClass;

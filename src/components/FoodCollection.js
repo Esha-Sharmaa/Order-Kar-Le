@@ -29,7 +29,6 @@ const FoodCollection = () => {
     useEffect(() => {
         fetchFoodCollections();
     }, [])
-    !loading && console.log(collectionCards[3]);
     return loading ? <Shimmer /> : <div className="p-10"> 
         <h1 className="text-[40px] font-semibold"> {collectionHeader?.card?.card?.title}</h1>
         <p className="text-lg opacity-90 mt-2 font-thin"> {collectionHeader?.card?.card?.description}</p>

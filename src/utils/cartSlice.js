@@ -16,7 +16,6 @@ const cartSlice = createSlice({
         removeItem: (state, action) => {  //,action
             state.items.pop();
             // to print the state 
-            console.log(current(state));
         },
         clearCart: (state, action) => {
             // state.items.length = 0;
