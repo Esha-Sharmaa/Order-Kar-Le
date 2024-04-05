@@ -14,7 +14,9 @@ const FoodCollection = () => {
 
     const fetchFoodCollections = async () => {
         try {
-            const data = await fetch(`${COLLECTION_URL}${collectionLink}&sortBy=&filters=&type=rcv2&offset=0&page_type=null`);
+            const data = await fetch(
+              `${COLLECTION_URL}${collectionLink}&sortBy=&filters=&type=rcv2&offset=0&page_type=null`
+            );
             const json = await data.json();
             setCollectionHeader(json.data.cards[0]);
             setCollectionCards(json.data.cards);
